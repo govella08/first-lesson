@@ -1,0 +1,24 @@
+<h1>THESE ARE OUR USERS</h1>
+
+<div>
+
+    <ul>
+      @for(post of posts$ | async; track $index) {
+        <li>{{post.body}}</li>
+        <hr>
+      } @empty {
+        <span>No data found</span>
+      }
+    </ul>
+
+</div>
+
+<div>
+  <p>{{age()}}</p>
+</div>
+<div>
+  <p>{{myAge()}}</p>
+</div>
+
+
+<app-role></app-role>
